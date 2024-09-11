@@ -76,6 +76,7 @@ class MyTelegramBot extends HtmlTelegramBot {
 
     async message() {
         this.mode = 'message';
+        this.list = [];
         const text = this.loadMessage('message');
         await this.sendImage('message');
         await this.sendTextButtons(text, {
